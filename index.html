@@ -9,10 +9,294 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"> 
 
+    <script src="https://d3js.org/d3.v4.js"></script>
+
 <style>
 
+
+@font-face {
+  font-family: TorstarDeckCondensed;
+  src: url(https://misc.thestar.com/fonts/TorstarDeckCondensed-Semibold.otf);
+}
+
+
+/* 
+Raptors colours
+#CE1141 for red
+#000000 for black 
+#A1A1A4 for silver
+#B4975A for gold
+*/
+
+
+body {
+	margin: 0;
+  	-webkit-tap-highlight-color: rgba(0,0,0,0);
+  	background-color: #f8f8f8;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.graphic-top, .graphic-bottom {
+    max-width: 660px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
 .graphic-wrapper {
-  /* max-width: 660px; */
+  margin: 0 auto;
+  /* max-width: 600px;  */
+}
+
+
+
+  .graphic {
+    width: 100%;
+    position: relative;
+
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .flexit {
+    display: flex;
+  }
+
+  .flexitColumn {
+    flex-direction: column;
+  }
+
+  .line-container {
+    width: 1px;
+    /* background-color: #999; */
+    background-color: #CE1141;
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    top: 0;
+  }
+
+  
+
+  .date-container {
+    background-color: #f8f8f8;
+    padding: 16px;
+    margin-bottom: 80px;
+    position: relative;
+    
+  }
+
+  .date-container p {
+    font-weight: 600;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1em;
+    letter-spacing: 1px;
+    color: #CE1141;
+    
+  }
+  
+  .timeline-container {
+    background-color: #f8f8f8;
+    position: relative;
+    padding: 16px;
+    max-width: 500px;
+    margin: 0 auto 80px;
+    
+  }
+  
+  .timeline-container p {
+    font-weight: 400;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    margin: 0;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.4em;
+    letter-spacing: 0.25px;
+  }
+  
+
+  .timeline-container p a {
+     color: #333;
+  }
+
+   .timeline-container p a:hover {
+    color: #CE1141;
+   }
+
+  .timeline-container p span {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 0 1px;
+    background-color: #CE1141;
+    color: #F8F8F8;
+    padding: 0 4px;
+    white-space: nowrap;
+    border-radius: 2px;
+  }
+
+  .timeline-container p.secondary-date {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    padding-bottom: 8px;
+    text-align: center;
+    /* color: #222; */
+    color: #CE1141;
+  }
+  
+  .scoreContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .timeline-container p.wins, .timeline-container p.losses {
+    display: block;
+    margin: 0 12px;
+  }
+  
+  .timeline-container p.wins span, .timeline-container p.losses span {
+    font-weight: 600;
+    color: #444;
+    background-color: #F8F8F8;
+  }
+
+.graphic-map {
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  margin: 0 auto 12px;
+}
+
+.graphic-img {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 12px;
+  border-radius: 0;
+}
+
+.seasonReport-container {
+  display: flex;
+}
+
+.bracket {
+ width: 120px;
+ /* height: 100%; */
+}
+
+.leftBracket {
+  border-top: 1px solid #CE1141;
+  /* border-right: 0; */
+  border-bottom: 1px solid #CE1141;
+  border-left: 1px solid #CE1141;
+}
+
+.rightBracket {
+  border-top: 1px solid #CE1141;
+  border-right: 1px solid #CE1141;
+  border-bottom: 1px solid #CE1141;
+  /* border-left: 0; */
+}
+
+.report-container {
+  padding: 30px;
+}
+
+.reportNumbers {
+  justify-content: space-around;
+  text-align: center;
+  margin: 12px auto;
+}
+
+p.reportNumber{
+  font-size: 42px;
+  color: #CE1141;
+}
+
+.reportOutcomes-container {
+  margin: 12px auto;
+}
+
+p.reportOutcomes-sub {
+  font-weight: 600;
+  color: #444;
+  background-color: #F8F8F8;
+}
+
+.pwbreak {
+  padding-bottom: 8px;
+}
+
+/*.graphic2 .line-container {
+    background-color: #d10d0d;
+  }*/
+
+/*.graphic2 .timeline-container p.secondary-date, .graphic2 .date-container p {
+    color: #b90c0c;
+  }*/
+
+/*.graphic2 .timeline-container p {
+  color: #e90f0f;
+}*/
+
+/*.graphic2 .timeline-container p span {
+  background-color: #fddfdf;
+}
+*/
+  
+
+p.interlude {
+   font-weight: 400;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    margin: 0 0 72px;
+    color: #444;
+    font-size: 20px;
+    line-height: 1.4em;
+    letter-spacing: 0.25px;
+    text-align: center;
+
+}
+
+ @media (max-width: 450px) {
+
+  .date-container {
+     padding: 12px 4px;
+     margin-bottom: 48px;
+  }
+
+  .date-container p {
+     font-size: 20px;
+
+  }
+
+   .timeline-container {
+    padding: 12px 4px;
+    max-width: 500px;
+    margin: 0 auto 48px;
+   }
+
+   .timeline-container p { 
+    font-size: 15px;
+   }
+
+   p.interlude {
+     margin: 0 0 56px;
+      font-size: 18px;
+   }
+
 }
 
 
@@ -40,12 +324,34 @@
 
      
         <div class="total-container">
-
+            <div class="report-container">
+                <!-- <p class="secondary-date">2018-2019<br> season report</p> -->
+                <div class="reportNumbers flexit">
+                  <div class="winsReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Wins</p>
+                    <p class="reportNumber">252</p>
+                  </div>
+                  <div class="lossReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Losses</p>
+                    <p class="reportNumber">179</p>
+                  </div>
+                  <div class="ratioReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Win Ratio</p>
+                    <p class="reportNumber">.585</p>
+                  </div>
+                </div>
+                <!-- <div class="reportOutcomes-container">
+                  <p class="reportOutcomes-sub">Outcomes</p>
+                  <p class="outcome regSeason"><span>Regular Season:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p class="outcome playoffSeason"><span>Playoff:</span> NBA champions Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, explicabo. </p>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quod, maiores aut et blanditiis totam deserunt veritatis tempore dolor dolorem quidem voluptas impedit ipsam.</p> -->
+              </div>
         </div>
   
+        <div id="chart1"></div>
 
-
-    </div>
+    </div> <!-- end of graphic tag -->
 
 
 
@@ -59,6 +365,183 @@
   </div>
 
 <script>
+
+var parseDate = d3.timeParse("%m/%d/%Y");
+var formatTime = d3.timeFormat("%b %e");
+const chartWidth =  parseInt(d3.select('#chart1').style('width'))
+
+// set the dimensions and margins of the graph
+var margin = {top: 10, right: 30, bottom: 30, left: 60},
+    width = chartWidth - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#chart1")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+//Read the data
+d3.csv("./data/nick-nurse-games.csv",function(data) {
+
+    data.forEach(function(d) {
+        d.date = parseDate(d.date)
+    });
+    
+    console.log(data);
+
+  // Add X axis --> it is a date format
+//   var x = d3.scaleTime()
+//       .domain(d3.extent(data, function(d) { return d.date; }))
+//       .range([ 0, width ]);
+//     svg.append("g")
+//       .attr("transform", "translate(0," + height + ")")
+//       .call(d3.axisBottom(x));
+
+// Add X axis --> it is a date format
+var x = d3.scaleLinear()
+    .domain([1,data.length])
+    .range([ 0, width ]);
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x));
+
+  // Add Y axis
+  var y = d3.scaleLinear()
+    .domain([0, 1])
+    .range([ height, 0 ]);
+  svg.append("g")
+    .call(d3.axisLeft(y));
+
+  //.5 line
+  svg.append("line")
+    .attr("class", "positionline")
+    .style("stroke", "#444")
+    .style("stroke-dasharray", "3,5")
+    .style("opacity", 0.5)
+    .attr("y1", height/2)
+    .attr("y2", height/2)
+    .attr("x1", 0)
+    .attr("x2", width);
+
+  //end of 18-19 season
+  svg.append("line")
+    .attr("class", "positionline")
+    .style("stroke", "#444")
+    .style("opacity", 0.5)
+    .attr("y1", 0)
+    .attr("y2", height)
+    .attr("x1", x(data[107].indx))
+    .attr("x2", x(data[107].indx));
+
+  //end of 19-20 season
+  svg.append("line")
+    .attr("class", "positionline")
+    .style("stroke", "#444")
+    .style("opacity", 0.5)
+    .attr("y1", 0)
+    .attr("y2", height)
+    .attr("x1", x(data[190].indx))
+    .attr("x2", x(data[190].indx));
+
+  //end of 20-21 season
+  svg.append("line")
+    .attr("class", "positionline")
+    .style("stroke", "#444")
+    .style("opacity", 0.5)
+    .attr("y1", 0)
+    .attr("y2", height)
+    .attr("x1", x(data[262].indx))
+    .attr("x2", x(data[262].indx));
+
+  //end of 20-21 season
+  svg.append("line")
+    .attr("class", "positionline")
+    .style("stroke", "#444")
+    .style("opacity", 0.5)
+    .attr("y1", 0)
+    .attr("y2", height)
+    .attr("x1", x(data[350].indx))
+    .attr("x2", x(data[350].indx));
+
+
+
+  // This allows to find the closest X index of the mouse:
+  var bisect = d3.bisector(function(d) { return d.indx; }).left;
+
+  // Create the circle that travels along the curve of chart
+  var focus = svg
+    .append('g')
+    .append('circle')
+      .style("fill", "none")
+      .attr("stroke", "black")
+      .attr('r', 8.5)
+      .style("opacity", 0)
+
+  // Create the text that travels along the curve of chart
+  var focusText = svg
+    .append('g')
+    .append('text')
+      .style("opacity", 0)
+      .attr("text-anchor", "left")
+      .attr("alignment-baseline", "middle")
+
+  // Add the line
+  svg
+    .append("path")
+    .datum(data)
+    .attr("fill", "none")
+    .attr("stroke", "#CE1141")
+    .attr("stroke-width", 1.5)
+    .attr("d", d3.line()
+      .x(function(d) { return x(d.indx) })
+      .y(function(d) { return y(d.wlRatio) })
+      )
+
+  // Create a rect on top of the svg area: this rectangle recovers mouse position
+  svg
+    .append('rect')
+    .style("fill", "none")
+    .style("pointer-events", "all")
+    .attr('width', width)
+    .attr('height', height)
+    .on('mouseover', mouseover)
+    .on('mousemove', mousemove)
+    .on('mouseout', mouseout);
+
+
+  // What happens when the mouse move -> show the annotations at the right positions.
+  function mouseover() {
+    focus.style("opacity", 1)
+    focusText.style("opacity",1)
+  }
+
+  function mousemove() {
+    // recover coordinate we need
+    var x0 = x.invert(d3.mouse(this)[0]);
+    var i = bisect(data, x0, 1);
+    selectedData = data[i]
+    focus
+      .attr("cx", x(selectedData.indx))
+      .attr("cy", y(selectedData.wlRatio))
+    focusText
+    //   .html("x:" + selectedData.date + "  -  " + "y:" + selectedData.wlRatio)
+      .html("Win ratio " + selectedData.wlRatio)
+      .attr("x", x(selectedData.indx)+15)
+      .attr("y", y(selectedData.wlRatio))
+    }
+  function mouseout() {
+    focus.style("opacity", 0)
+    focusText.style("opacity", 0)
+  }
+
+})
+
+
+
 
 
     function resize(){
