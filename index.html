@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://misc.thestar.com/interactivegraphic/assets/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="https://misc.thestar.com/interactivegraphic/libraries/interactive-graphic-cta/cta-style.css">
 
     <script src="https://d3js.org/d3.v4.js"></script>
 
@@ -58,6 +59,40 @@ body {
     position: relative;
 
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  }
+
+  .graphic-legend {
+    display: flex;
+    justify-content: center;
+    max-width: 660px;
+    width: 100;
+    margin: 0 auto;
+  }
+
+  .graphic-legend-line {
+    float: left;
+    display: block;
+    height: 3px;
+    width: 30px;
+    /* border-radius: 16px; */
+    margin-top: 8px;
+    margin-right: 8px;
+  }
+  
+  #legend-line-1 {
+    background-color: #CE1141;
+  }
+  
+  #legend-line-2 {
+    background-color: #000000;    
+  }
+
+  .graphic-legend-container {
+    min-width: 142px;
+  }
+
+  .interactive-graphic-cta {
+    white-space: normal;
   }
 
   p {
@@ -320,55 +355,56 @@ p.interlude {
 <body>
   <div class="graphic-wrapper graphic-1">
     <div class="graphic-top">
-        <h2 class="graphic-top__graphic-hed">Nick Nurse's time at the Raptos by-the-numbers</h2>
-        <h3 class="graphic-top__graphic-dek">With a championship on his first year, tktktkt ktk kt Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ex delectus doloremque, cum aliquid amet.</h3>
-
-        <!-- <div class="graphic-legend">
+      <h2 class="graphic-top__graphic-hed">Nick Nurse's time at the Raptos by-the-numbers</h2>
+      <h3 class="graphic-top__graphic-dek">With a championship on his first year, tktktkt ktk kt Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ex delectus doloremque, cum aliquid amet.</h3>
+      <span class="interactive-graphic-cta interactive-graphic-cta__desktop"><img class="interactive-graphic-cta-image" src="https://misc.thestar.com/interactivegraphic/libraries/interactive-graphic-cta/SVG/Hover.svg" height="23px">Hover over the lines to see the ratio details</span><span class="interactive-graphic-cta interactive-graphic-cta__mobile"><img class="interactive-graphic-cta-image" src="https://misc.thestar.com/interactivegraphic/libraries/interactive-graphic-cta/SVG/Tap.svg" height="23px">Tap over the lines to see the ratio details</span>
+      
+      </div>
+      
+      <div class="graphic">
+        
+        <div class="graphic-legend">
             <div class="graphic-legend-container">
-                <div class="graphic-legend-dot" id="legend-dot-1"></div><p class="graphic-legend-text">Legend text 1</p>
+                <div class="graphic-legend-line" id="legend-line-1"></div><p class="graphic-legend-text">Overal record</p>
             </div>
             <div class="graphic-legend-container">
-                <div class="graphic-legend-dot" id="legend-dot-2"></div><p class="graphic-legend-text">Legend text 2</p>
+                <div class="graphic-legend-line" id="legend-line-2"></div><p class="graphic-legend-text">Season record</p>
             </div>
-        </div> -->
-    </div>
-
-    <div class="graphic">
-
-     
-        <div class="total-container">
-            <div class="report-container">
-                <!-- <p class="secondary-date">2018-2019<br> season report</p> -->
-                <div class="reportNumbers flexit">
-                  <div class="winsReport-container flexit flexitColumn">
-                    <p class="reportNumberTitle">Wins</p>
-                    <p class="reportNumber">252</p>
-                  </div>
-                  <div class="lossReport-container flexit flexitColumn">
-                    <p class="reportNumberTitle">Losses</p>
-                    <p class="reportNumber">179</p>
-                  </div>
-                  <div class="ratioReport-container flexit flexitColumn">
-                    <p class="reportNumberTitle">Win Ratio</p>
-                    <p class="reportNumber">.585</p>
-                  </div>
-                </div>
-                <!-- <div class="reportOutcomes-container">
-                  <p class="reportOutcomes-sub">Outcomes</p>
-                  <p class="outcome regSeason"><span>Regular Season:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <p class="outcome playoffSeason"><span>Playoff:</span> NBA champions Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, explicabo. </p>
-                </div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quod, maiores aut et blanditiis totam deserunt veritatis tempore dolor dolorem quidem voluptas impedit ipsam.</p> -->
-              </div>
         </div>
-  
         <div id="chart1"></div>
 
-    </div> <!-- end of graphic tag -->
 
-
-
-   
+        <div class="total-container">
+          <div class="report-container">
+            <!-- <p class="secondary-date">2018-2019<br> season report</p> -->
+            <div class="reportNumbers flexit">
+              <div class="winsReport-container flexit flexitColumn">
+                <p class="reportNumberTitle">Wins</p>
+                <p class="reportNumber">252</p>
+              </div>
+              <div class="lossReport-container flexit flexitColumn">
+                <p class="reportNumberTitle">Losses</p>
+                <p class="reportNumber">179</p>
+              </div>
+              <div class="ratioReport-container flexit flexitColumn">
+                <p class="reportNumberTitle">Win Ratio</p>
+                <p class="reportNumber">.585</p>
+              </div>
+            </div>
+            <!-- <div class="reportOutcomes-container">
+              <p class="reportOutcomes-sub">Outcomes</p>
+              <p class="outcome regSeason"><span>Regular Season:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p class="outcome playoffSeason"><span>Playoff:</span> NBA champions Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, explicabo. </p>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quod, maiores aut et blanditiis totam deserunt veritatis tempore dolor dolorem quidem voluptas impedit ipsam.</p> -->
+          </div>
+        </div>
+        
+      </div> <!-- end of graphic tag -->
+      
+      
+      
+      
 
     <div class="graphic-bottom">
         <p class="graphic-bottom__notetext" id="notetext">* Any further note to explain one aspect of the data could go here.</p>
@@ -384,9 +420,9 @@ var formatTime = d3.timeFormat("%b %e");
 const chartWidth =  parseInt(d3.select('#chart1').style('width'))
 
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 30, left: 30},
+var margin = {top: 100, right: 30, bottom: 30, left: 30},
     width = chartWidth - margin.left - margin.right,
-    height = 200 - margin.top - margin.bottom;
+    height = 300 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#chart1")
@@ -447,8 +483,8 @@ var x = d3.scaleLinear()
     .style("opacity", 0.5)
     .attr("y1", 0)
     .attr("y2", height)
-    .attr("x1", x(data[107].indx))
-    .attr("x2", x(data[107].indx));
+    .attr("x1", x(data[106].indx))
+    .attr("x2", x(data[106].indx));
 
   //end of 19-20 season
   svg.append("line")
@@ -457,8 +493,8 @@ var x = d3.scaleLinear()
     .style("opacity", 0.5)
     .attr("y1", 0)
     .attr("y2", height)
-    .attr("x1", x(data[190].indx))
-    .attr("x2", x(data[190].indx));
+    .attr("x1", x(data[189].indx))
+    .attr("x2", x(data[189].indx));
 
   //end of 20-21 season
   svg.append("line")
@@ -467,8 +503,8 @@ var x = d3.scaleLinear()
     .style("opacity", 0.5)
     .attr("y1", 0)
     .attr("y2", height)
-    .attr("x1", x(data[262].indx))
-    .attr("x2", x(data[262].indx));
+    .attr("x1", x(data[261].indx))
+    .attr("x2", x(data[261].indx));
 
   //end of 20-21 season
   svg.append("line")
@@ -477,8 +513,8 @@ var x = d3.scaleLinear()
     .style("opacity", 0.5)
     .attr("y1", 0)
     .attr("y2", height)
-    .attr("x1", x(data[350].indx))
-    .attr("x2", x(data[350].indx));
+    .attr("x1", x(data[349].indx))
+    .attr("x2", x(data[349].indx));
 
   //season 18-19 text
   svg.append('g')
@@ -488,7 +524,7 @@ var x = d3.scaleLinear()
     //   .attr("alignment-baseline", "middle")
       .html("18-19 Season")
       .attr("x", x(data[53].indx))
-      .attr("y", height/3*2)
+      .attr("y", height)
 
   //season 19-20 text
   svg.append('g')
@@ -498,7 +534,7 @@ var x = d3.scaleLinear()
     //   .attr("alignment-baseline", "middle")
       .html("19-20 Season")
       .attr("x", x(data[148].indx))
-      .attr("y", height/3*2)
+      .attr("y", height)
 
   //season 20-21 text
   svg.append('g')
@@ -508,7 +544,7 @@ var x = d3.scaleLinear()
     //   .attr("alignment-baseline", "middle")
       .html("20-21 Season")
       .attr("x", x(data[225].indx))
-      .attr("y", height/3*2)
+      .attr("y", height)
 
   //season 21-22 text
   svg.append('g')
@@ -518,7 +554,7 @@ var x = d3.scaleLinear()
     //   .attr("alignment-baseline", "middle")
       .html("21-22 Season")
       .attr("x", x(data[305].indx))
-      .attr("y", height/3*2)
+      .attr("y", height)
 
   //season 22-23 text
   svg.append('g')
@@ -528,14 +564,14 @@ var x = d3.scaleLinear()
     //   .attr("alignment-baseline", "middle")
       .html("22-23 Season")
       .attr("x", x(data[392].indx))
-      .attr("y", height/3*2)
+      .attr("y", height)
 
 
 
   // This allows to find the closest X index of the mouse:
   var bisect = d3.bisector(function(d) { return d.indx; }).left;
 
-// Add the line
+// Add the line for all
 svg
   .append("path")
   .datum(data)
@@ -547,29 +583,132 @@ svg
     .y(function(d) { return y(d.wlRatio) })
     )
 
+// Add the line for 18-19 season
+svg
+  .append("path")
+  .datum(data.filter(function(d){return d.indx >= 0 &&  d.indx <= 106 }))
+  .attr("fill", "none")
+  .attr("stroke", "#000")
+  .attr("stroke-width", 2.3)
+  .attr("d", d3.line()
+    .x(function(d) { return x(d.indx) })
+    .y(function(d) { return y(d.seasonWratio) })
+    )
+
+// Add the line for 19-20 season
+svg
+  .append("path")
+  .datum(data.filter(function(d){return d.indx >= 107 &&  d.indx <= 189 }))
+  .attr("fill", "none")
+  .attr("stroke", "#000")
+  .attr("stroke-width", 2.3)
+  .attr("d", d3.line()
+    .x(function(d) { return x(d.indx) })
+    .y(function(d) { return y(d.seasonWratio) })
+    )
+
+// Add the line for 20-21 season
+svg
+  .append("path")
+  .datum(data.filter(function(d){return d.indx >= 190 &&  d.indx <= 261 }))
+  .attr("fill", "none")
+  .attr("stroke", "#000")
+  .attr("stroke-width", 2.3)
+  .attr("d", d3.line()
+    .x(function(d) { return x(d.indx) })
+    .y(function(d) { return y(d.seasonWratio) })
+    )
+
+// Add the line for 21-22 season
+svg
+  .append("path")
+  .datum(data.filter(function(d){return d.indx >= 262 &&  d.indx <= 344 }))
+  .attr("fill", "none")
+  .attr("stroke", "#000")
+  .attr("stroke-width", 2.3)
+  .attr("d", d3.line()
+    .x(function(d) { return x(d.indx) })
+    .y(function(d) { return y(d.seasonWratio) })
+    )
+
+  // Add the line for 21-22 season
+svg
+  .append("path")
+  .datum(data.filter(function(d){return d.indx >= 262 &&  d.indx <= 344 }))
+  .attr("fill", "none")
+  .attr("stroke", "#000")
+  .attr("stroke-width", 2.3)
+  .attr("d", d3.line()
+  .x(function(d) { return x(d.indx) })
+  .y(function(d) { return y(d.seasonWratio) })
+  )
+  
+  // Add the line for 22-23 season
+svg
+  .append("path")
+  .datum(data.filter(function(d){return d.indx >= 263 &&  d.indx <= data.length }))
+  .attr("fill", "none")
+  .attr("stroke", "#000")
+  .attr("stroke-width", 2.3)
+  .attr("d", d3.line()
+    .x(function(d) { return x(d.indx) })
+    .y(function(d) { return y(d.seasonWratio) })
+    )
+
 // Create a rect on top of the svg area: this rectangle recovers mouse position
 var focusLine = svg
     .append("line")
     .attr("class", "positionline")
     .style("stroke", "#CE1141")
-    .style("opacity", 0)
+    .style("opacity", 1)
+    .attr("y1", y(data[data.length-1].wlRatio)-5.5)
+    .attr("y2", 0 - margin.top + margin.bottom)
+    .attr("x1", x(data[data.length-1].indx))
+    .attr("x2", x(data[data.length-1].indx));
 
-  // Create the circle that travels along the curve of chart
+  // Create the circle that travels along the curve of chart on overall
   var focus = svg
     .append('g')
     .append('circle')
       .style("fill", "none")
       .attr("stroke", "#CE1141")
       .attr('r', 5.5)
-      .style("opacity", 0)
+      .style("opacity", 1)
+      .attr("cx", x(data[data.length-1].indx))
+      .attr("cy", y(data[data.length-1].wlRatio))
+
+  // Create the circle that travels along the curve of chart on each season
+  var focusSeason = svg
+    .append('g')
+    .append('circle')
+      .style("fill", "none")
+      .attr("stroke", "#000")
+      .attr('r', 5.5)
+      .style("opacity", 1)
+      .attr("cx", x(data[data.length-1].indx))
+      .attr("cy", y(data[data.length-1].seasonWratio));
 
   // Create the text that travels along the curve of chart
   var focusText = svg
     .append('g')
     .append('text')
+      .style("opacity", 1)
+      .attr("text-anchor", "left")
+      .attr("alignment-baseline", "middle")
+      .html("Overall win ratio " + data[data.length-1].wlRatio)
+      .attr("y", 15 - margin.top + margin.bottom)
+      .attr("x", x(data[data.length-1].indx)-180);
+
+  // Create the text that travels along the curve of chart
+  var focusTextSeason = svg
+    .append('g')
+    .append('text')
       .style("opacity", 0)
       .attr("text-anchor", "left")
       .attr("alignment-baseline", "middle")
+      .html(data[data.length-1].season + " win ratio " + data[data.length-1].seasonWratio)
+      .attr("y", 35 - margin.top + margin.bottom)
+      .attr("x", x(data[data.length-1].indx)-180);
 
   // Create a rect on top of the svg area: this rectangle recovers mouse position
   svg
@@ -586,8 +725,10 @@ var focusLine = svg
   // What happens when the mouse move -> show the annotations at the right positions.
   function mouseover() {
     focus.style("opacity", 1)
+    focusSeason.style("opacity", 1)
     focusLine.style("opacity", 1)
     focusText.style("opacity",1)
+    focusTextSeason.style("opacity",1)
   }
 
   function mousemove() {
@@ -597,26 +738,37 @@ var focusLine = svg
     selectedData = data[i]
     focusLine
         .attr("y1", y(selectedData.wlRatio)-5.5)
-        .attr("y2", y(.9)-15)
+        .attr("y2", 0 - margin.top + margin.bottom)
         .attr("x1", x(selectedData.indx))
         .attr("x2", x(selectedData.indx));
     focus
       .attr("cx", x(selectedData.indx))
       .attr("cy", y(selectedData.wlRatio))
+    focusSeason
+      .attr("cx", x(selectedData.indx))
+      .attr("cy", y(selectedData.seasonWratio))
     focusText
     //   .html("x:" + selectedData.date + "  -  " + "y:" + selectedData.wlRatio)
-      .html("Win ratio " + selectedData.wlRatio)
-        .attr("y", y(.9))
+      .html("Overall win ratio " + selectedData.wlRatio)
+        // .attr("y", y(.9))
+        .attr("y", 15 - margin.top + margin.bottom)
     //   .attr("x", x(selectedData.indx)+15)
       .attr("x", function() {
-                          if (d3.event.pageX > (width/2)) {return x(selectedData.indx)-120}
+                          if (d3.event.pageX > (width/2)) {return x(selectedData.indx)-180}
+                          else {return x(selectedData.indx)+15}
+                        });
+    focusTextSeason
+      .html(selectedData.season + " win ratio " + selectedData.seasonWratio)
+        .attr("y", 35 - margin.top + margin.bottom)
+      .attr("x", function() {
+                          if (d3.event.pageX > (width/2)) {return x(selectedData.indx)-180}
                           else {return x(selectedData.indx)+15}
                         });
     }
   function mouseout() {
-    focus.style("opacity", 0)
-    focusLine.style("opacity", 0)
-    focusText.style("opacity", 0)
+    // focus.style("opacity", 0)
+    // focusLine.style("opacity", 0)
+    // focusText.style("opacity", 0)
   }
 
 })
