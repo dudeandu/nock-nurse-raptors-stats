@@ -144,8 +144,9 @@ body {
     background-color: #f8f8f8;
     position: relative;
     padding: 16px;
-    max-width: 500px;
-    margin: 0 auto 80px;
+    /* max-width: 500px; */
+    max-width: 33%;
+    margin: 0 auto 40px;
     
   }
   
@@ -228,7 +229,7 @@ body {
 }
 
 .seasonGroup-container.flexit {
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
 
 .bracket {
@@ -266,6 +267,10 @@ body {
 p.reportNumber{
   font-size: 42px;
   color: #CE1141;
+}
+
+.seasonReport-container p.reportNumber{
+  font-size: 28px;
 }
 
 .reportOutcomes-container {
@@ -335,6 +340,26 @@ p.interlude {
 
 
 
+ @media (max-width: 850px) { 
+   .timeline-container {
+     padding: 16px;
+     max-width: 50%;
+     
+   }
+
+  
+ }
+
+
+ @media (max-width: 600px) { 
+   .timeline-container {
+     padding: 16px;
+     max-width: none;
+     min-width: none;
+     width: 100%;
+     
+   }
+ }
 
  @media (max-width: 450px) {
 
@@ -374,7 +399,7 @@ p.interlude {
   <div class="graphic-wrapper graphic-1">
     <div class="graphic-top">
       <h2 class="graphic-top__graphic-hed">Nick Nurse's time at the Raptos by-the-numbers</h2>
-      <h3 class="graphic-top__graphic-dek">With a championship on his first year, tktktkt ktk kt Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ex delectus doloremque, cum aliquid amet.</h3>
+      <h3 class="graphic-top__graphic-dek">Nurse's introduction to the Raptors was as an Assistant Coach in charge of offence, which saw the team's offensive line generate impressive numbers for five years. Later, an NBA Championship and a Coach of The Year in his starting season as The Raptors' head coach. This is what </h3>
       
       </div>
       
@@ -408,11 +433,11 @@ p.interlude {
               </div>
               <div class="lossReport-container flexit flexitColumn">
                 <p class="reportNumberTitle">Losses</p>
-                <p class="reportNumber">179</p>
+                <p class="reportNumber">180</p>
               </div>
               <div class="ratioReport-container flexit flexitColumn">
                 <p class="reportNumberTitle">Win Ratio</p>
-                <p class="reportNumber">.585</p>
+                <p class="reportNumber">.583</p>
               </div>
             </div>
             <!-- <div class="reportOutcomes-container">
@@ -439,23 +464,23 @@ p.interlude {
                 <div class="reportNumbers flexit">
                   <div class="winsReport-container flexit flexitColumn">
                     <p class="reportNumberTitle">Wins</p>
-                    <p class="reportNumber">89</p>
+                    <p class="reportNumber">74</p>
                   </div>
                   <div class="lossReport-container flexit flexitColumn">
                     <p class="reportNumberTitle">Losses</p>
-                    <p class="reportNumber">20</p>
+                    <p class="reportNumber">32</p>
                   </div>
                   <div class="ratioReport-container flexit flexitColumn">
                     <p class="reportNumberTitle">Win Ratio</p>
-                    <p class="reportNumber">.703</p>
+                    <p class="reportNumber">.698</p>
                   </div>
                 </div>
                 <p class="reportOutcomes-sub">Season Ratio</p>
-                <div id="chart2"></div>
+                <div id="chart2" class="seasonCharts"></div>
                 <div class="reportOutcomes-container">
                   <p class="reportOutcomes-sub">Outcomes</p>
-                  <p class="outcome regSeason"><span>Regular Season:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <p class="outcome playoffSeason"><span>Playoff:</span> NBA champions Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, explicabo. </p>
+                  <p class="outcome regSeason"><span>Regular Season:</span> Second place in the Eastern Conference</p>
+                  <p class="outcome playoffSeason"><span>Playoff:</span> Defeated the Buck in the Conference Finals (4-2), and then the Warriors (4-2) to become the NBA Champions</p>
                 </div>
                 <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quod, maiores aut et blanditiis totam deserunt veritatis tempore dolor dolorem quidem voluptas impedit ipsam.</p> -->
               </div>
@@ -467,30 +492,30 @@ p.interlude {
             <div class="seasonReport-container">
               <div class="bracket leftBracket"></div>
               <div class="report-container">
-                <p class="secondary-date">2018-2019 season</p>
+                <p class="secondary-date">2019-2020 season</p>
 
                 <img class="graphic-img" src="./img/T1J104482149.JPG" alt="Nick Nurse is introduced as the new NBA head coach of the Toronto Raptors at the Air Canada Centre in Toronto on Thursday, June 14, 2018">
                 
                 <div class="reportNumbers flexit">
                   <div class="winsReport-container flexit flexitColumn">
                     <p class="reportNumberTitle">Wins</p>
-                    <p class="reportNumber">89</p>
+                    <p class="reportNumber">60</p>
                   </div>
                   <div class="lossReport-container flexit flexitColumn">
                     <p class="reportNumberTitle">Losses</p>
-                    <p class="reportNumber">20</p>
+                    <p class="reportNumber">23</p>
                   </div>
                   <div class="ratioReport-container flexit flexitColumn">
                     <p class="reportNumberTitle">Win Ratio</p>
-                    <p class="reportNumber">.703</p>
+                    <p class="reportNumber">.723</p>
                   </div>
                 </div>
                 <p class="reportOutcomes-sub">Season Ratio</p>
-                <div id="chart3"></div>
+                <div id="chart3" class="seasonCharts"></div>
                 <div class="reportOutcomes-container">
                   <p class="reportOutcomes-sub">Outcomes</p>
-                  <p class="outcome regSeason"><span>Regular Season:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <p class="outcome playoffSeason"><span>Playoff:</span> NBA champions Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, explicabo. </p>
+                  <p class="outcome regSeason"><span>Regular Season:</span> Second in the Eastern Conference</p>
+                  <p class="outcome playoffSeason"><span>Playoff:</span> Swept the Nets on the first round (4-0), and then defeated by the Celtics in the conference semi-finals (4-3)</p>
                 </div>
                 <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quod, maiores aut et blanditiis totam deserunt veritatis tempore dolor dolorem quidem voluptas impedit ipsam.</p> -->
               </div>
@@ -502,30 +527,99 @@ p.interlude {
             <div class="seasonReport-container">
               <div class="bracket leftBracket"></div>
               <div class="report-container">
-                <p class="secondary-date">2018-2019 season</p>
+                <p class="secondary-date">2020-2021 season</p>
 
                 <img class="graphic-img" src="./img/T1J104482149.JPG" alt="Nick Nurse is introduced as the new NBA head coach of the Toronto Raptors at the Air Canada Centre in Toronto on Thursday, June 14, 2018">
                 
                 <div class="reportNumbers flexit">
                   <div class="winsReport-container flexit flexitColumn">
                     <p class="reportNumberTitle">Wins</p>
-                    <p class="reportNumber">89</p>
+                    <p class="reportNumber">27</p>
                   </div>
                   <div class="lossReport-container flexit flexitColumn">
                     <p class="reportNumberTitle">Losses</p>
-                    <p class="reportNumber">20</p>
+                    <p class="reportNumber">45</p>
                   </div>
                   <div class="ratioReport-container flexit flexitColumn">
                     <p class="reportNumberTitle">Win Ratio</p>
-                    <p class="reportNumber">.703</p>
+                    <p class="reportNumber">.375</p>
                   </div>
                 </div>
                 <p class="reportOutcomes-sub">Season Ratio</p>
-                <div id="chart3"></div>
+                <div id="chart4" class="seasonCharts"></div>
                 <div class="reportOutcomes-container">
                   <p class="reportOutcomes-sub">Outcomes</p>
-                  <p class="outcome regSeason"><span>Regular Season:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <p class="outcome playoffSeason"><span>Playoff:</span> NBA champions Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, explicabo. </p>
+                  <p class="outcome regSeason"><span>Regular Season:</span>12th in the eastern conference. The lowest win percentage during Nurse's tenure at the Raptors</p>
+                  <p class="outcome playoffSeason"><span>Playoff:</span> Did not qualify </p>
+                </div>
+                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quod, maiores aut et blanditiis totam deserunt veritatis tempore dolor dolorem quidem voluptas impedit ipsam.</p> -->
+              </div>
+              <div class="bracket rightBracket"></div>
+            </div>
+          </div>
+
+          <div class="timeline-container">
+            <div class="seasonReport-container">
+              <div class="bracket leftBracket"></div>
+              <div class="report-container">
+                <p class="secondary-date">2021-2022 season</p>
+
+                <img class="graphic-img" src="./img/T1J104482149.JPG" alt="Nick Nurse is introduced as the new NBA head coach of the Toronto Raptors at the Air Canada Centre in Toronto on Thursday, June 14, 2018">
+                
+                <div class="reportNumbers flexit">
+                  <div class="winsReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Wins</p>
+                    <p class="reportNumber">50</p>
+                  </div>
+                  <div class="lossReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Losses</p>
+                    <p class="reportNumber">38</p>
+                  </div>
+                  <div class="ratioReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Win Ratio</p>
+                    <p class="reportNumber">.568</p>
+                  </div>
+                </div>
+                <p class="reportOutcomes-sub">Season Ratio</p>
+                <div id="chart5" class="seasonCharts"></div>
+                <div class="reportOutcomes-container">
+                  <p class="reportOutcomes-sub">Outcomes</p>
+                  <p class="outcome regSeason"><span>Regular Season:</span> Fifth place in the eastern conference</p>
+                  <p class="outcome playoffSeason"><span>Playoff:</span> Lost in the first round agains the 76ers (4-2)</p>
+                </div>
+              </div>
+              <div class="bracket rightBracket"></div>
+            </div>
+          </div>
+
+          <div class="timeline-container">
+            <div class="seasonReport-container">
+              <div class="bracket leftBracket"></div>
+              <div class="report-container">
+                <p class="secondary-date">2022-2023 season</p>
+
+                <img class="graphic-img" src="./img/T1J104482149.JPG" alt="Nick Nurse is introduced as the new NBA head coach of the Toronto Raptors at the Air Canada Centre in Toronto on Thursday, June 14, 2018">
+                
+                <div class="reportNumbers flexit">
+                  <div class="winsReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Wins</p>
+                    <p class="reportNumber">41</p>
+                  </div>
+                  <div class="lossReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Losses</p>
+                    <p class="reportNumber">42</p>
+                  </div>
+                  <div class="ratioReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Win Ratio</p>
+                    <p class="reportNumber">.494</p>
+                  </div>
+                </div>
+                <p class="reportOutcomes-sub">Season Ratio</p>
+                <div id="chart6" class="seasonCharts"></div>
+                <div class="reportOutcomes-container">
+                  <p class="reportOutcomes-sub">Outcomes</p>
+                  <p class="outcome regSeason"><span>Regular Season:</span> Tenth place in the eastern conference</p>
+                  <p class="outcome playoffSeason"><span>Playoff:</span> Failed to qualify after losing the firs play in game against Chicago</p>
                 </div>
                 <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quod, maiores aut et blanditiis totam deserunt veritatis tempore dolor dolorem quidem voluptas impedit ipsam.</p> -->
               </div>
@@ -554,11 +648,15 @@ p.interlude {
 var parseDate = d3.timeParse("%m/%d/%Y");
 var formatTime = d3.timeFormat("%b %e");
 const chartWidth =  parseInt(d3.select('#chart1').style('width'))
+let seasonWords = '';
+if (chartWidth >= 695) {
+  seasonWords = ' season'
+}
 const chart2Width =  parseInt(d3.select('#chart2').style('width'))
-// const chart3Width =  parseInt(d3.select('#chart3').style('width'))
-// const chart4Width =  parseInt(d3.select('#chart4').style('width'))
-// const chart5Width =  parseInt(d3.select('#chart5').style('width'))
-// const chart6Width =  parseInt(d3.select('#chart6').style('width'))
+const chart3Width =  parseInt(d3.select('#chart3').style('width'))
+const chart4Width =  parseInt(d3.select('#chart4').style('width'))
+const chart5Width =  parseInt(d3.select('#chart5').style('width'))
+const chart6Width =  parseInt(d3.select('#chart6').style('width'))
 
 // set the dimensions and margins of the graph
 var margin = {top: 100, right: 30, bottom: 30, left: 30},
@@ -580,6 +678,38 @@ var smallMargin = {top: 10, right: 10, bottom: 30, left: 10},
     smallheight = 150 - smallMargin.top - smallMargin.bottom;
 // append the svg object to the body of the page
 var svg2 = d3.select("#chart2")
+  .append("svg")
+    .attr("width", smallwidth + smallMargin.left + smallMargin.right)
+    .attr("height", smallheight + smallMargin.top + smallMargin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + smallMargin.left + "," + smallMargin.top + ")");
+// append the svg object to the body of the page
+var svg3 = d3.select("#chart3")
+  .append("svg")
+    .attr("width", smallwidth + smallMargin.left + smallMargin.right)
+    .attr("height", smallheight + smallMargin.top + smallMargin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + smallMargin.left + "," + smallMargin.top + ")");
+// append the svg object to the body of the page
+var svg4 = d3.select("#chart4")
+  .append("svg")
+    .attr("width", smallwidth + smallMargin.left + smallMargin.right)
+    .attr("height", smallheight + smallMargin.top + smallMargin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + smallMargin.left + "," + smallMargin.top + ")");
+// append the svg object to the body of the page
+var svg5 = d3.select("#chart5")
+  .append("svg")
+    .attr("width", smallwidth + smallMargin.left + smallMargin.right)
+    .attr("height", smallheight + smallMargin.top + smallMargin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + smallMargin.left + "," + smallMargin.top + ")");
+// append the svg object to the body of the page
+var svg6 = d3.select("#chart6")
   .append("svg")
     .attr("width", smallwidth + smallMargin.left + smallMargin.right)
     .attr("height", smallheight + smallMargin.top + smallMargin.bottom)
@@ -620,19 +750,52 @@ var x = d3.scaleLinear()
     // .call(d3.axisLeft(y));
 
 // Add X axis --> it is a date format
+var x2 = d3.scaleLinear()
+    .domain([0, 106])
+    .range([ 0, smallwidth ]);
+  svg2.append("g")
+    .attr("transform", "translate(0," + smallheight + ")")
+
+// Add X axis --> it is a date format
+var x3 = d3.scaleLinear()
+    .domain([107, 189])
+    .range([ 0, smallwidth ]);
+  svg3.append("g")
+    .attr("transform", "translate(0," + smallheight + ")")
+
+// Add X axis --> it is a date format
+var x4 = d3.scaleLinear()
+    .domain([190, 261])
+    .range([ 0, smallwidth ]);
+  svg4.append("g")
+    .attr("transform", "translate(0," + smallheight + ")")
+
+// Add X axis --> it is a date format
+var x5 = d3.scaleLinear()
+    .domain([262, 349])
+    .range([ 0, smallwidth ]);
+  svg5.append("g")
+    .attr("transform", "translate(0," + smallheight + ")")
+
+// Add X axis --> it is a date format
+var x6 = d3.scaleLinear()
+    .domain([350, data.length])
+    .range([ 0, smallwidth ]);
+  svg6.append("g")
+    .attr("transform", "translate(0," + smallheight + ")")
+
+// Add X axis --> it is a date format
 var xS = d3.scaleLinear()
     .domain([1,data.length])
-    .range([ 0, width ]);
+    .range([ 0, smallwidth ]);
   svg2.append("g")
-    .attr("transform", "translate(0," + height + ")")
-    // .call(d3.axisBottom(x));
+    .attr("transform", "translate(0," + smallheight + ")")
 
   // Add Y axis
   var yS = d3.scaleLinear()
     .domain([0, 1])
-    .range([ height, 0 ]);
+    .range([ smallheight, 0 ]);
   svg2.append("g")
-    // .call(d3.axisLeft(y));
 
   //.5 line
   svg.append("line")
@@ -646,14 +809,15 @@ var xS = d3.scaleLinear()
     .attr("x2", width);
 
   //.5 line
-  svg2.append("line")
+  d3.selectAll(".seasonCharts svg")
+    .append("line")
     .attr("class", "positionline")
     .style("stroke", "#444")
     .style("stroke-dasharray", "3,5")
     .style("opacity", 0.5)
-    .attr("y1", height/2)
-    .attr("y2", height/2)
-    .attr("x1", xS(10))
+    .attr("y1", smallheight/2)
+    .attr("y2", smallheight/2)
+    .attr("x1", xS(15))
     .attr("x2", width);
 
   //end of 18-19 season
@@ -702,7 +866,7 @@ var xS = d3.scaleLinear()
       .attr("class","seasonText")
       .attr("text-anchor", "middle")
     //   .attr("alignment-baseline", "middle")
-      .html("18-19 Season")
+      .html("18-19 " + seasonWords)
       .attr("x", x(data[53].indx))
       .attr("y", height)
 
@@ -712,7 +876,7 @@ var xS = d3.scaleLinear()
       .attr("class","seasonText")
       .attr("text-anchor", "middle")
     //   .attr("alignment-baseline", "middle")
-      .html("19-20 Season")
+      .html("19-20 " + seasonWords)
       .attr("x", x(data[148].indx))
       .attr("y", height)
 
@@ -722,7 +886,7 @@ var xS = d3.scaleLinear()
       .attr("class","seasonText")
       .attr("text-anchor", "middle")
     //   .attr("alignment-baseline", "middle")
-      .html("20-21 Season")
+      .html("20-21 " + seasonWords)
       .attr("x", x(data[225].indx))
       .attr("y", height)
 
@@ -732,7 +896,7 @@ var xS = d3.scaleLinear()
       .attr("class","seasonText")
       .attr("text-anchor", "middle")
     //   .attr("alignment-baseline", "middle")
-      .html("21-22 Season")
+      .html("21-22 " + seasonWords)
       .attr("x", x(data[305].indx))
       .attr("y", height)
 
@@ -742,7 +906,7 @@ var xS = d3.scaleLinear()
       .attr("class","seasonText")
       .attr("text-anchor", "middle")
     //   .attr("alignment-baseline", "middle")
-      .html("22-23 Season")
+      .html("22-23 " + seasonWords)
       .attr("x", x(data[392].indx))
       .attr("y", height)
 
@@ -764,7 +928,47 @@ var xS = d3.scaleLinear()
     //   .attr("alignment-baseline", "middle")
       .html(".500")
       .attr("x", 0)
-      .attr("y", yS(.48))
+      .attr("y", yS(.53))
+
+  //season 50% text
+  svg3.append('g')
+    .append('text')
+      .attr("class","seasonText")
+      .attr("text-anchor", "middle")
+    //   .attr("alignment-baseline", "middle")
+      .html(".500")
+      .attr("x", 0)
+      .attr("y", yS(.53))
+
+  //season 50% text
+  svg4.append('g')
+    .append('text')
+      .attr("class","seasonText")
+      .attr("text-anchor", "middle")
+    //   .attr("alignment-baseline", "middle")
+      .html(".500")
+      .attr("x", 0)
+      .attr("y", yS(.53))
+
+  //season 50% text
+  svg5.append('g')
+    .append('text')
+      .attr("class","seasonText")
+      .attr("text-anchor", "middle")
+    //   .attr("alignment-baseline", "middle")
+      .html(".500")
+      .attr("x", 0)
+      .attr("y", yS(.53))
+
+  //season 50% text
+  svg6.append('g')
+    .append('text')
+      .attr("class","seasonText")
+      .attr("text-anchor", "middle")
+    //   .attr("alignment-baseline", "middle")
+      .html(".500")
+      .attr("x", 0)
+      .attr("y", yS(.53))
 
 
 
@@ -791,57 +995,57 @@ svg2
   .attr("stroke", "#CE1141")
   .attr("stroke-width", 2.3)
   .attr("d", d3.line()
-    .x(function(d) { return xS(d.indx) })
+    .x(function(d) { return x2(d.indx) })
     .y(function(d) { return yS(d.seasonWratio) })
     )
 
-// // Add the line for 19-20 season
-// svg
-//   .append("path")
-//   .datum(data.filter(function(d){return d.indx >= 107 &&  d.indx <= 189 }))
-//   .attr("fill", "none")
-//   .attr("stroke", "#000")
-//   .attr("stroke-width", 2.3)
-//   .attr("d", d3.line()
-//     .x(function(d) { return x(d.indx) })
-//     .y(function(d) { return y(d.seasonWratio) })
-//     )
+// Add the line for 19-20 season
+svg3
+  .append("path")
+  .datum(data.filter(function(d){return d.indx >= 107 &&  d.indx <= 189 }))
+  .attr("fill", "none")
+  .attr("stroke", "#CE1141")
+  .attr("stroke-width", 2.3)
+  .attr("d", d3.line()
+    .x(function(d) { return x3(d.indx) })
+    .y(function(d) { return yS(d.seasonWratio) })
+    )
 
-// // Add the line for 20-21 season
-// svg
-//   .append("path")
-//   .datum(data.filter(function(d){return d.indx >= 190 &&  d.indx <= 261 }))
-//   .attr("fill", "none")
-//   .attr("stroke", "#000")
-//   .attr("stroke-width", 2.3)
-//   .attr("d", d3.line()
-//     .x(function(d) { return x(d.indx) })
-//     .y(function(d) { return y(d.seasonWratio) })
-//     )
+// Add the line for 20-21 season
+svg4
+  .append("path")
+  .datum(data.filter(function(d){return d.indx >= 190 &&  d.indx <= 261 }))
+  .attr("fill", "none")
+  .attr("stroke", "#CE1141")
+  .attr("stroke-width", 2.3)
+  .attr("d", d3.line()
+    .x(function(d) { return x4(d.indx) })
+    .y(function(d) { return yS(d.seasonWratio) })
+    )
 
-//   // Add the line for 21-22 season
-// svg
-//   .append("path")
-//   .datum(data.filter(function(d){return d.indx >= 262 &&  d.indx <= 344 }))
-//   .attr("fill", "none")
-//   .attr("stroke", "#000")
-//   .attr("stroke-width", 2.3)
-//   .attr("d", d3.line()
-//   .x(function(d) { return x(d.indx) })
-//   .y(function(d) { return y(d.seasonWratio) })
-//   )
+  // Add the line for 21-22 season
+svg5
+  .append("path")
+  .datum(data.filter(function(d){return d.indx >= 262 &&  d.indx <= 349 }))
+  .attr("fill", "none")
+  .attr("stroke", "#CE1141")
+  .attr("stroke-width", 2.3)
+  .attr("d", d3.line()
+    .x(function(d) { return x5(d.indx) })
+    .y(function(d) { return yS(d.seasonWratio) })
+    )
   
-//   // Add the line for 22-23 season
-// svg
-//   .append("path")
-//   .datum(data.filter(function(d){return d.indx >= 263 &&  d.indx <= data.length }))
-//   .attr("fill", "none")
-//   .attr("stroke", "#000")
-//   .attr("stroke-width", 2.3)
-//   .attr("d", d3.line()
-//     .x(function(d) { return x(d.indx) })
-//     .y(function(d) { return y(d.seasonWratio) })
-//     )
+  // Add the line for 22-23 season
+svg6
+  .append("path")
+  .datum(data.filter(function(d){return d.indx >= 350 &&  d.indx <= data.length }))
+  .attr("fill", "none")
+  .attr("stroke", "#CE1141")
+  .attr("stroke-width", 2.3)
+  .attr("d", d3.line()
+    .x(function(d) { return x6(d.indx) })
+    .y(function(d) { return yS(d.seasonWratio) })
+    )
 
 // Create a rect on top of the svg area: this rectangle recovers mouse position
 var focusLine = svg
@@ -974,6 +1178,8 @@ var focusLine = svg
                 };
        
         parent.postMessage(message, "*");
+
+        
     };
 
     window.addEventListener('load', function() {
