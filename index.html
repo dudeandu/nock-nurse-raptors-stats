@@ -40,7 +40,7 @@ body {
 	box-sizing: border-box;
 }
 
-.graphic-top, .graphic-bottom {
+.graphic-top, .graphic-bottom, .wrapper {
     max-width: 660px;
     width: 100%;
     margin: 0 auto;
@@ -227,8 +227,12 @@ body {
   display: flex;
 }
 
+.seasonGroup-container.flexit {
+  /* flex-wrap: wrap; */
+}
+
 .bracket {
- width: 120px;
+ width: 16px;
  /* height: 100%; */
 }
 
@@ -248,7 +252,7 @@ body {
 
 .report-container {
   padding: 30px;
-  max-width: 420px;
+  max-width: 660px;
   width: 100%;
   margin: 0 auto;
 }
@@ -316,6 +320,20 @@ p.interlude {
     font-size: 14px;
 }
 
+.marginLine {
+  padding: 10px 0 0;
+  margin: 0 0 10px;
+}
+
+.horizontal {
+  border-top: .5px solid #CE1141;
+}
+
+.vertical {
+  border-right: .5px solid #CE1141;
+}
+
+
 
 
  @media (max-width: 450px) {
@@ -357,19 +375,21 @@ p.interlude {
     <div class="graphic-top">
       <h2 class="graphic-top__graphic-hed">Nick Nurse's time at the Raptos by-the-numbers</h2>
       <h3 class="graphic-top__graphic-dek">With a championship on his first year, tktktkt ktk kt Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ex delectus doloremque, cum aliquid amet.</h3>
-      <span class="interactive-graphic-cta interactive-graphic-cta__desktop"><img class="interactive-graphic-cta-image" src="https://misc.thestar.com/interactivegraphic/libraries/interactive-graphic-cta/SVG/Hover.svg" height="23px">Hover over the lines to see the ratio details</span><span class="interactive-graphic-cta interactive-graphic-cta__mobile"><img class="interactive-graphic-cta-image" src="https://misc.thestar.com/interactivegraphic/libraries/interactive-graphic-cta/SVG/Tap.svg" height="23px">Tap over the lines to see the ratio details</span>
       
       </div>
       
       <div class="graphic">
         
-        <div class="graphic-legend">
+        <!-- <div class="graphic-legend">
             <div class="graphic-legend-container">
                 <div class="graphic-legend-line" id="legend-line-1"></div><p class="graphic-legend-text">Overal record</p>
             </div>
             <div class="graphic-legend-container">
                 <div class="graphic-legend-line" id="legend-line-2"></div><p class="graphic-legend-text">Season record</p>
             </div>
+        </div> -->
+        <div class="wrapper">
+          <span class="interactive-graphic-cta interactive-graphic-cta__desktop"><img class="interactive-graphic-cta-image" src="https://misc.thestar.com/interactivegraphic/libraries/interactive-graphic-cta/SVG/Hover.svg" height="23px">Hover over the lines to see the ratio details</span><span class="interactive-graphic-cta interactive-graphic-cta__mobile"><img class="interactive-graphic-cta-image" src="https://misc.thestar.com/interactivegraphic/libraries/interactive-graphic-cta/SVG/Tap.svg" height="23px">Tap over the lines to see the ratio details</span>
         </div>
         <div id="chart1"></div>
 
@@ -378,6 +398,10 @@ p.interlude {
           <div class="report-container">
             <!-- <p class="secondary-date">2018-2019<br> season report</p> -->
             <div class="reportNumbers flexit">
+              <div class="winsReport-container flexit flexitColumn">
+                <p class="reportNumberTitle"><br></p>
+                <p class="reportNumber">Overall stats</p>
+              </div>
               <div class="winsReport-container flexit flexitColumn">
                 <p class="reportNumberTitle">Wins</p>
                 <p class="reportNumber">252</p>
@@ -399,6 +423,118 @@ p.interlude {
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quod, maiores aut et blanditiis totam deserunt veritatis tempore dolor dolorem quidem voluptas impedit ipsam.</p> -->
           </div>
         </div>
+
+        <div class="marginLine horizontal"></div>
+        
+        <div class="seasonGroup-container flexit">
+
+          <div class="timeline-container">
+            <div class="seasonReport-container">
+              <div class="bracket leftBracket"></div>
+              <div class="report-container">
+                <p class="secondary-date">2018-2019 season</p>
+
+                <img class="graphic-img" src="./img/GettyImages-1149777524.jpg" alt="Nick Nurse is introduced as the new NBA head coach of the Toronto Raptors at the Air Canada Centre in Toronto on Thursday, June 14, 2018">
+                
+                <div class="reportNumbers flexit">
+                  <div class="winsReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Wins</p>
+                    <p class="reportNumber">89</p>
+                  </div>
+                  <div class="lossReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Losses</p>
+                    <p class="reportNumber">20</p>
+                  </div>
+                  <div class="ratioReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Win Ratio</p>
+                    <p class="reportNumber">.703</p>
+                  </div>
+                </div>
+                <p class="reportOutcomes-sub">Season Ratio</p>
+                <div id="chart2"></div>
+                <div class="reportOutcomes-container">
+                  <p class="reportOutcomes-sub">Outcomes</p>
+                  <p class="outcome regSeason"><span>Regular Season:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p class="outcome playoffSeason"><span>Playoff:</span> NBA champions Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, explicabo. </p>
+                </div>
+                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quod, maiores aut et blanditiis totam deserunt veritatis tempore dolor dolorem quidem voluptas impedit ipsam.</p> -->
+              </div>
+              <div class="bracket rightBracket"></div>
+            </div>
+          </div>
+
+          <div class="timeline-container">
+            <div class="seasonReport-container">
+              <div class="bracket leftBracket"></div>
+              <div class="report-container">
+                <p class="secondary-date">2018-2019 season</p>
+
+                <img class="graphic-img" src="./img/T1J104482149.JPG" alt="Nick Nurse is introduced as the new NBA head coach of the Toronto Raptors at the Air Canada Centre in Toronto on Thursday, June 14, 2018">
+                
+                <div class="reportNumbers flexit">
+                  <div class="winsReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Wins</p>
+                    <p class="reportNumber">89</p>
+                  </div>
+                  <div class="lossReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Losses</p>
+                    <p class="reportNumber">20</p>
+                  </div>
+                  <div class="ratioReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Win Ratio</p>
+                    <p class="reportNumber">.703</p>
+                  </div>
+                </div>
+                <p class="reportOutcomes-sub">Season Ratio</p>
+                <div id="chart3"></div>
+                <div class="reportOutcomes-container">
+                  <p class="reportOutcomes-sub">Outcomes</p>
+                  <p class="outcome regSeason"><span>Regular Season:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p class="outcome playoffSeason"><span>Playoff:</span> NBA champions Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, explicabo. </p>
+                </div>
+                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quod, maiores aut et blanditiis totam deserunt veritatis tempore dolor dolorem quidem voluptas impedit ipsam.</p> -->
+              </div>
+              <div class="bracket rightBracket"></div>
+            </div>
+          </div>
+
+          <div class="timeline-container">
+            <div class="seasonReport-container">
+              <div class="bracket leftBracket"></div>
+              <div class="report-container">
+                <p class="secondary-date">2018-2019 season</p>
+
+                <img class="graphic-img" src="./img/T1J104482149.JPG" alt="Nick Nurse is introduced as the new NBA head coach of the Toronto Raptors at the Air Canada Centre in Toronto on Thursday, June 14, 2018">
+                
+                <div class="reportNumbers flexit">
+                  <div class="winsReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Wins</p>
+                    <p class="reportNumber">89</p>
+                  </div>
+                  <div class="lossReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Losses</p>
+                    <p class="reportNumber">20</p>
+                  </div>
+                  <div class="ratioReport-container flexit flexitColumn">
+                    <p class="reportNumberTitle">Win Ratio</p>
+                    <p class="reportNumber">.703</p>
+                  </div>
+                </div>
+                <p class="reportOutcomes-sub">Season Ratio</p>
+                <div id="chart3"></div>
+                <div class="reportOutcomes-container">
+                  <p class="reportOutcomes-sub">Outcomes</p>
+                  <p class="outcome regSeason"><span>Regular Season:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p class="outcome playoffSeason"><span>Playoff:</span> NBA champions Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, explicabo. </p>
+                </div>
+                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quod, maiores aut et blanditiis totam deserunt veritatis tempore dolor dolorem quidem voluptas impedit ipsam.</p> -->
+              </div>
+              <div class="bracket rightBracket"></div>
+            </div>
+          </div>
+
+        </div> <!-- end of season group container -->
+
         
       </div> <!-- end of graphic tag -->
       
@@ -418,6 +554,11 @@ p.interlude {
 var parseDate = d3.timeParse("%m/%d/%Y");
 var formatTime = d3.timeFormat("%b %e");
 const chartWidth =  parseInt(d3.select('#chart1').style('width'))
+const chart2Width =  parseInt(d3.select('#chart2').style('width'))
+// const chart3Width =  parseInt(d3.select('#chart3').style('width'))
+// const chart4Width =  parseInt(d3.select('#chart4').style('width'))
+// const chart5Width =  parseInt(d3.select('#chart5').style('width'))
+// const chart6Width =  parseInt(d3.select('#chart6').style('width'))
 
 // set the dimensions and margins of the graph
 var margin = {top: 100, right: 30, bottom: 30, left: 30},
@@ -432,6 +573,19 @@ var svg = d3.select("#chart1")
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
+
+          // set the dimensions and margins of the graph
+var smallMargin = {top: 10, right: 10, bottom: 30, left: 10},
+    smallwidth = chart2Width - smallMargin.left - smallMargin.right,
+    smallheight = 150 - smallMargin.top - smallMargin.bottom;
+// append the svg object to the body of the page
+var svg2 = d3.select("#chart2")
+  .append("svg")
+    .attr("width", smallwidth + smallMargin.left + smallMargin.right)
+    .attr("height", smallheight + smallMargin.top + smallMargin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + smallMargin.left + "," + smallMargin.top + ")");
 
 //Read the data
 d3.csv("./data/nick-nurse-games.csv",function(data) {
@@ -465,6 +619,21 @@ var x = d3.scaleLinear()
   svg.append("g")
     // .call(d3.axisLeft(y));
 
+// Add X axis --> it is a date format
+var xS = d3.scaleLinear()
+    .domain([1,data.length])
+    .range([ 0, width ]);
+  svg2.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    // .call(d3.axisBottom(x));
+
+  // Add Y axis
+  var yS = d3.scaleLinear()
+    .domain([0, 1])
+    .range([ height, 0 ]);
+  svg2.append("g")
+    // .call(d3.axisLeft(y));
+
   //.5 line
   svg.append("line")
     .attr("class", "positionline")
@@ -473,7 +642,18 @@ var x = d3.scaleLinear()
     .style("opacity", 0.5)
     .attr("y1", height/2)
     .attr("y2", height/2)
-    .attr("x1", 0)
+    .attr("x1", x(10))
+    .attr("x2", width);
+
+  //.5 line
+  svg2.append("line")
+    .attr("class", "positionline")
+    .style("stroke", "#444")
+    .style("stroke-dasharray", "3,5")
+    .style("opacity", 0.5)
+    .attr("y1", height/2)
+    .attr("y2", height/2)
+    .attr("x1", xS(10))
     .attr("x2", width);
 
   //end of 18-19 season
@@ -566,6 +746,26 @@ var x = d3.scaleLinear()
       .attr("x", x(data[392].indx))
       .attr("y", height)
 
+  //season 50% text
+  svg.append('g')
+    .append('text')
+      .attr("class","seasonText")
+      .attr("text-anchor", "middle")
+    //   .attr("alignment-baseline", "middle")
+      .html(".500")
+      .attr("x", 0)
+      .attr("y", y(.48))
+
+  //season 50% text
+  svg2.append('g')
+    .append('text')
+      .attr("class","seasonText")
+      .attr("text-anchor", "middle")
+    //   .attr("alignment-baseline", "middle")
+      .html(".500")
+      .attr("x", 0)
+      .attr("y", yS(.48))
+
 
 
   // This allows to find the closest X index of the mouse:
@@ -583,77 +783,65 @@ svg
     .y(function(d) { return y(d.wlRatio) })
     )
 
-// Add the line for 18-19 season
-svg
+// // Add the line for 18-19 season
+svg2
   .append("path")
   .datum(data.filter(function(d){return d.indx >= 0 &&  d.indx <= 106 }))
   .attr("fill", "none")
-  .attr("stroke", "#000")
+  .attr("stroke", "#CE1141")
   .attr("stroke-width", 2.3)
   .attr("d", d3.line()
-    .x(function(d) { return x(d.indx) })
-    .y(function(d) { return y(d.seasonWratio) })
+    .x(function(d) { return xS(d.indx) })
+    .y(function(d) { return yS(d.seasonWratio) })
     )
 
-// Add the line for 19-20 season
-svg
-  .append("path")
-  .datum(data.filter(function(d){return d.indx >= 107 &&  d.indx <= 189 }))
-  .attr("fill", "none")
-  .attr("stroke", "#000")
-  .attr("stroke-width", 2.3)
-  .attr("d", d3.line()
-    .x(function(d) { return x(d.indx) })
-    .y(function(d) { return y(d.seasonWratio) })
-    )
+// // Add the line for 19-20 season
+// svg
+//   .append("path")
+//   .datum(data.filter(function(d){return d.indx >= 107 &&  d.indx <= 189 }))
+//   .attr("fill", "none")
+//   .attr("stroke", "#000")
+//   .attr("stroke-width", 2.3)
+//   .attr("d", d3.line()
+//     .x(function(d) { return x(d.indx) })
+//     .y(function(d) { return y(d.seasonWratio) })
+//     )
 
-// Add the line for 20-21 season
-svg
-  .append("path")
-  .datum(data.filter(function(d){return d.indx >= 190 &&  d.indx <= 261 }))
-  .attr("fill", "none")
-  .attr("stroke", "#000")
-  .attr("stroke-width", 2.3)
-  .attr("d", d3.line()
-    .x(function(d) { return x(d.indx) })
-    .y(function(d) { return y(d.seasonWratio) })
-    )
+// // Add the line for 20-21 season
+// svg
+//   .append("path")
+//   .datum(data.filter(function(d){return d.indx >= 190 &&  d.indx <= 261 }))
+//   .attr("fill", "none")
+//   .attr("stroke", "#000")
+//   .attr("stroke-width", 2.3)
+//   .attr("d", d3.line()
+//     .x(function(d) { return x(d.indx) })
+//     .y(function(d) { return y(d.seasonWratio) })
+//     )
 
-// Add the line for 21-22 season
-svg
-  .append("path")
-  .datum(data.filter(function(d){return d.indx >= 262 &&  d.indx <= 344 }))
-  .attr("fill", "none")
-  .attr("stroke", "#000")
-  .attr("stroke-width", 2.3)
-  .attr("d", d3.line()
-    .x(function(d) { return x(d.indx) })
-    .y(function(d) { return y(d.seasonWratio) })
-    )
-
-  // Add the line for 21-22 season
-svg
-  .append("path")
-  .datum(data.filter(function(d){return d.indx >= 262 &&  d.indx <= 344 }))
-  .attr("fill", "none")
-  .attr("stroke", "#000")
-  .attr("stroke-width", 2.3)
-  .attr("d", d3.line()
-  .x(function(d) { return x(d.indx) })
-  .y(function(d) { return y(d.seasonWratio) })
-  )
+//   // Add the line for 21-22 season
+// svg
+//   .append("path")
+//   .datum(data.filter(function(d){return d.indx >= 262 &&  d.indx <= 344 }))
+//   .attr("fill", "none")
+//   .attr("stroke", "#000")
+//   .attr("stroke-width", 2.3)
+//   .attr("d", d3.line()
+//   .x(function(d) { return x(d.indx) })
+//   .y(function(d) { return y(d.seasonWratio) })
+//   )
   
-  // Add the line for 22-23 season
-svg
-  .append("path")
-  .datum(data.filter(function(d){return d.indx >= 263 &&  d.indx <= data.length }))
-  .attr("fill", "none")
-  .attr("stroke", "#000")
-  .attr("stroke-width", 2.3)
-  .attr("d", d3.line()
-    .x(function(d) { return x(d.indx) })
-    .y(function(d) { return y(d.seasonWratio) })
-    )
+//   // Add the line for 22-23 season
+// svg
+//   .append("path")
+//   .datum(data.filter(function(d){return d.indx >= 263 &&  d.indx <= data.length }))
+//   .attr("fill", "none")
+//   .attr("stroke", "#000")
+//   .attr("stroke-width", 2.3)
+//   .attr("d", d3.line()
+//     .x(function(d) { return x(d.indx) })
+//     .y(function(d) { return y(d.seasonWratio) })
+//     )
 
 // Create a rect on top of the svg area: this rectangle recovers mouse position
 var focusLine = svg
@@ -677,16 +865,16 @@ var focusLine = svg
       .attr("cx", x(data[data.length-1].indx))
       .attr("cy", y(data[data.length-1].wlRatio))
 
-  // Create the circle that travels along the curve of chart on each season
-  var focusSeason = svg
-    .append('g')
-    .append('circle')
-      .style("fill", "none")
-      .attr("stroke", "#000")
-      .attr('r', 5.5)
-      .style("opacity", 1)
-      .attr("cx", x(data[data.length-1].indx))
-      .attr("cy", y(data[data.length-1].seasonWratio));
+  // // Create the circle that travels along the curve of chart on each season
+  // var focusSeason = svg
+  //   .append('g')
+  //   .append('circle')
+  //     .style("fill", "none")
+  //     .attr("stroke", "#000")
+  //     .attr('r', 5.5)
+  //     .style("opacity", 1)
+  //     .attr("cx", x(data[data.length-1].indx))
+  //     .attr("cy", y(data[data.length-1].seasonWratio));
 
   // Create the text that travels along the curve of chart
   var focusText = svg
@@ -699,16 +887,16 @@ var focusLine = svg
       .attr("y", 15 - margin.top + margin.bottom)
       .attr("x", x(data[data.length-1].indx)-180);
 
-  // Create the text that travels along the curve of chart
-  var focusTextSeason = svg
-    .append('g')
-    .append('text')
-      .style("opacity", 0)
-      .attr("text-anchor", "left")
-      .attr("alignment-baseline", "middle")
-      .html(data[data.length-1].season + " win ratio " + data[data.length-1].seasonWratio)
-      .attr("y", 35 - margin.top + margin.bottom)
-      .attr("x", x(data[data.length-1].indx)-180);
+  // // Create the text that travels along the curve of chart
+  // var focusTextSeason = svg
+  //   .append('g')
+  //   .append('text')
+  //     .style("opacity", 1)
+  //     .attr("text-anchor", "left")
+  //     .attr("alignment-baseline", "middle")
+  //     .html(data[data.length-1].season + " win ratio " + data[data.length-1].seasonWratio)
+  //     .attr("y", 35 - margin.top + margin.bottom)
+  //     .attr("x", x(data[data.length-1].indx)-180);
 
   // Create a rect on top of the svg area: this rectangle recovers mouse position
   svg
@@ -744,9 +932,9 @@ var focusLine = svg
     focus
       .attr("cx", x(selectedData.indx))
       .attr("cy", y(selectedData.wlRatio))
-    focusSeason
-      .attr("cx", x(selectedData.indx))
-      .attr("cy", y(selectedData.seasonWratio))
+    // focusSeason
+    //   .attr("cx", x(selectedData.indx))
+    //   .attr("cy", y(selectedData.seasonWratio))
     focusText
     //   .html("x:" + selectedData.date + "  -  " + "y:" + selectedData.wlRatio)
       .html("Overall win ratio " + selectedData.wlRatio)
@@ -757,13 +945,13 @@ var focusLine = svg
                           if (d3.event.pageX > (width/2)) {return x(selectedData.indx)-180}
                           else {return x(selectedData.indx)+15}
                         });
-    focusTextSeason
-      .html(selectedData.season + " win ratio " + selectedData.seasonWratio)
-        .attr("y", 35 - margin.top + margin.bottom)
-      .attr("x", function() {
-                          if (d3.event.pageX > (width/2)) {return x(selectedData.indx)-180}
-                          else {return x(selectedData.indx)+15}
-                        });
+    // focusTextSeason
+    //   .html(selectedData.season + " win ratio " + selectedData.seasonWratio)
+    //     .attr("y", 35 - margin.top + margin.bottom)
+    //   .attr("x", function() {
+    //                       if (d3.event.pageX > (width/2)) {return x(selectedData.indx)-180}
+    //                       else {return x(selectedData.indx)+15}
+    //                     });
     }
   function mouseout() {
     // focus.style("opacity", 0)
