@@ -330,6 +330,10 @@ p.interlude {
   margin: 0 0 10px;
 }
 
+.marginLine.seasonal {
+  display: none;
+}
+
 .horizontal {
   border-top: .5px solid #CE1141;
 }
@@ -351,6 +355,12 @@ p.interlude {
  }
 
 
+ @media (max-width: 650px) { 
+  p.reportNumber {
+    font-size: 32px;
+  }
+ }
+
  @media (max-width: 600px) { 
    .timeline-container {
      padding: 16px;
@@ -360,37 +370,65 @@ p.interlude {
      
    }
  }
-
- @media (max-width: 450px) {
-
-  .date-container {
-     padding: 12px 4px;
-     margin-bottom: 48px;
-  }
-
-  .date-container p {
-     font-size: 20px;
-
-  }
-
-   .timeline-container {
-    padding: 12px 4px;
-    max-width: 500px;
-    margin: 0 auto 48px;
+ 
+  @media (max-width: 475px) {
+   p.reportNumber {
+     font-size: 24px;
    }
-
-   .timeline-container p { 
-    font-size: 15px;
-   }
-
-   p.interlude {
-     margin: 0 0 56px;
+  }
+  
+  @media (max-width: 450px) {
+    
+    .date-container {
+      padding: 12px 4px;
+      margin-bottom: 48px;
+    }
+    
+    .date-container p {
+      font-size: 20px;
+      
+    }
+    
+    .timeline-container {
+      padding: 12px 4px;
+      max-width: 500px;
+      margin: 0 auto 8px;
+    }
+    
+    .timeline-container p { 
+      font-size: 15px;
+    }
+    
+    p.interlude {
+      margin: 0 0 56px;
       font-size: 18px;
+    }
+    
+  }
+  
+   @media (max-width: 455px) {
+    .report-container {
+      padding: 6px;
+    }
+    
+    .reportNumbers {
+      flex-direction: column;
+    }
+    
+    .seasonGroup-container .reportNumbers {
+      flex-direction: row;
+    }
+
+    .marginLine.seasonal {
+      display: block;
+    }
+
+    .bracket {
+      display: none;
+    }
    }
-
-}
-
-
+  
+  
 
 
 </style>
@@ -399,7 +437,7 @@ p.interlude {
   <div class="graphic-wrapper graphic-1">
     <div class="graphic-top">
       <h2 class="graphic-top__graphic-hed">Nick Nurse's time at the Raptos by-the-numbers</h2>
-      <h3 class="graphic-top__graphic-dek">Nurse's introduction to the Raptors was as an Assistant Coach in charge of offence, which saw the team's offensive line generate impressive numbers for five years. Later, an NBA Championship and a Coach of The Year in his starting season as The Raptors' head coach. This is what </h3>
+      <h3 class="graphic-top__graphic-dek">After four seasons as the Toronto Raptor's head coach, Nick Nurse is moving on. This is the story the numbers tell of his tenure.</h3>
       
       </div>
       
@@ -480,12 +518,13 @@ p.interlude {
                 <div class="reportOutcomes-container">
                   <p class="reportOutcomes-sub">Outcomes</p>
                   <p class="outcome regSeason"><span>Regular Season:</span> Second place in the Eastern Conference</p>
-                  <p class="outcome playoffSeason"><span>Playoff:</span> Defeated the Buck in the Conference Finals (4-2), and then the Warriors (4-2) to become the NBA Champions</p>
+                  <p class="outcome playoffSeason"><span>Playoff:</span> Defeated the Bucks in the Conference Finals (4-2), and then the Warriors (4-2) to become the NBA Champions</p>
                 </div>
                 <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quod, maiores aut et blanditiis totam deserunt veritatis tempore dolor dolorem quidem voluptas impedit ipsam.</p> -->
               </div>
               <div class="bracket rightBracket"></div>
             </div>
+            <div class="marginLine horizontal seasonal"></div>
           </div>
 
           <div class="timeline-container">
@@ -494,7 +533,7 @@ p.interlude {
               <div class="report-container">
                 <p class="secondary-date">2019-2020 season</p>
 
-                <img class="graphic-img" src="./img/T1J104482149.JPG" alt="Nick Nurse is introduced as the new NBA head coach of the Toronto Raptors at the Air Canada Centre in Toronto on Thursday, June 14, 2018">
+                <img class="graphic-img" src="./img/nurse-19-20/Lowry-Nurse.jpg" alt="Lowry #7 talks to head coach Nick Nurse of the Toronto Raptors during a game against the Boston Celtics at TD Garden on December 28, 2019 in Boston, Massachusetts. NOTE TO USER: User expressly acknowledges and agrees that, by downloading and or using this photograph, User is consenting to the terms and conditions of the Getty Images License Agreement. ">
                 
                 <div class="reportNumbers flexit">
                   <div class="winsReport-container flexit flexitColumn">
@@ -521,6 +560,7 @@ p.interlude {
               </div>
               <div class="bracket rightBracket"></div>
             </div>
+            <div class="marginLine horizontal seasonal"></div>
           </div>
 
           <div class="timeline-container">
@@ -529,7 +569,7 @@ p.interlude {
               <div class="report-container">
                 <p class="secondary-date">2020-2021 season</p>
 
-                <img class="graphic-img" src="./img/T1J104482149.JPG" alt="Nick Nurse is introduced as the new NBA head coach of the Toronto Raptors at the Air Canada Centre in Toronto on Thursday, June 14, 2018">
+                <img class="graphic-img" src="./img/nurse-20-21/Nick Nurse camp.jpg" alt="ORLANDO, FL - JULY 22: Nick Nurse of the Toronto Raptors coaches during practice as part of the NBA Restart 2020 on July 22, 2020 ">
                 
                 <div class="reportNumbers flexit">
                   <div class="winsReport-container flexit flexitColumn">
@@ -556,6 +596,7 @@ p.interlude {
               </div>
               <div class="bracket rightBracket"></div>
             </div>
+            <div class="marginLine horizontal seasonal"></div>
           </div>
 
           <div class="timeline-container">
@@ -564,7 +605,7 @@ p.interlude {
               <div class="report-container">
                 <p class="secondary-date">2021-2022 season</p>
 
-                <img class="graphic-img" src="./img/T1J104482149.JPG" alt="Nick Nurse is introduced as the new NBA head coach of the Toronto Raptors at the Air Canada Centre in Toronto on Thursday, June 14, 2018">
+                <img class="graphic-img" src="./img/nurse-21-22/RL_RAPSvsCAVS_09.JPG" alt="In first half action, Raptors assistant coach Earl Watson watches the action on the bench with Head Coach Nick Nurse (right) The Toronto Raptors took on the Cleveland Cavaliers in NBA basketball action at the Scotiabank Arena in Toronto. November 5 2021 ">
                 
                 <div class="reportNumbers flexit">
                   <div class="winsReport-container flexit flexitColumn">
@@ -590,6 +631,7 @@ p.interlude {
               </div>
               <div class="bracket rightBracket"></div>
             </div>
+            <div class="marginLine horizontal seasonal"></div>
           </div>
 
           <div class="timeline-container">
@@ -598,7 +640,7 @@ p.interlude {
               <div class="report-container">
                 <p class="secondary-date">2022-2023 season</p>
 
-                <img class="graphic-img" src="./img/T1J104482149.JPG" alt="Nick Nurse is introduced as the new NBA head coach of the Toronto Raptors at the Air Canada Centre in Toronto on Thursday, June 14, 2018">
+                <img class="graphic-img" src="./img/nurse-22-23/sr_Raptors_230413_08.JPG" alt="Nick Nurse addresses media a day after the Toronto Raptors fall to the Chicago Bulls 109-105 in the NBA play-in game at OVO Athletic Centre  in Toronto. April 13, 2023">
                 
                 <div class="reportNumbers flexit">
                   <div class="winsReport-container flexit flexitColumn">
@@ -625,6 +667,7 @@ p.interlude {
               </div>
               <div class="bracket rightBracket"></div>
             </div>
+            <div class="marginLine horizontal seasonal"></div>
           </div>
 
         </div> <!-- end of season group container -->
@@ -637,8 +680,8 @@ p.interlude {
       
 
     <div class="graphic-bottom">
-        <p class="graphic-bottom__notetext" id="notetext">* Any further note to explain one aspect of the data could go here.</p>
-        <p class="graphic-bottom__graphic-source" id="source">Source: Stats report</p>
+        <!-- <p class="graphic-bottom__notetext" id="notetext">* Any further note to explain one aspect of the data could go here.</p> -->
+        <p class="graphic-bottom__graphic-source" id="source">Source: NBA.com</p>
         <p class="graphic-bottom__graphic-byline" id="byline">Toronto Star graphic</p>
     </div>
   </div>
