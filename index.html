@@ -429,7 +429,7 @@ h3.graphic-hed {
  }
  
   @media (max-width: 475px) {
-   .reportNumbers {
+   .reportNumbers.topNumbers {
     margin: -24px auto 28px;
    }
 
@@ -531,25 +531,9 @@ h3.graphic-hed {
 
         <div class="total-container">
           <div class="report-container">
-            <h3 class="graphic-hed">Nick Nurse's stats while Raptor's Head Coach</h3>
+            <h3 class="graphic-hed">Nick Nurse's stats as Raptor's Head Coach</h3>
 
-            <!-- <p class="secondary-date">2018-2019<br> season report</p> -->
-            <!-- <table>
-              <th>
-                <td></td>
-                <td>Wins</td>
-                <td>Losses</td>
-                <td>Win Ratio</td>
-              </th>
-              <tr>
-                <td>Regular season</td>
-                <td>227</td>
-                <td>163</td>
-                <td>.582</td>
-              </tr>
-            </table> -->
-
-            <div class="reportNumbers flexit">
+            <div class="reportNumbers flexit topNumbers">
               <div class="winsReport-container flexit flexitColumn topNumbers">
                 <p class="reportNumberTitle"><br></p>
                 <p class="reportNumber subhed">All regular seasons</p>
@@ -567,7 +551,7 @@ h3.graphic-hed {
                 <p class="reportNumber">.582</p>
               </div>
             </div>
-            <div class="reportNumbers flexit">
+            <div class="reportNumbers flexit topNumbers">
               <div class="winsReport-container flexit flexitColumn topNumbers">
                 <p class="reportNumberTitle"><br></p>
                 <p class="reportNumber subhed">All playoff games</p>
@@ -827,16 +811,29 @@ h3.graphic-hed {
 
 var parseDate = d3.timeParse("%m/%d/%Y");
 var formatTime = d3.timeFormat("%b %e, %Y");
+
+
+const buildCharts = function() {
+
+
+d3.select('#chart1').html('')
+d3.select('#chart2').html('')
+d3.select('#chart3').html('')
+d3.select('#chart4').html('')
+d3.select('#chart5').html('')
+d3.select('#chart6').html('')
+
+
 const chartWidth =  parseInt(d3.select('#chart1').style('width'))
-let seasonWords = '';
-if (chartWidth >= 695) {
-  seasonWords = ' season'
-}
-const chart2Width =  parseInt(d3.select('#chart2').style('width'))
-const chart3Width =  parseInt(d3.select('#chart3').style('width'))
-const chart4Width =  parseInt(d3.select('#chart4').style('width'))
-const chart5Width =  parseInt(d3.select('#chart5').style('width'))
-const chart6Width =  parseInt(d3.select('#chart6').style('width'))
+  let seasonWords = '';
+  if (chartWidth >= 695) {
+    seasonWords = ' season'
+  }
+  const chart2Width =  parseInt(d3.select('#chart2').style('width'))
+  const chart3Width =  parseInt(d3.select('#chart3').style('width'))
+  const chart4Width =  parseInt(d3.select('#chart4').style('width'))
+  const chart5Width =  parseInt(d3.select('#chart5').style('width'))
+  const chart6Width =  parseInt(d3.select('#chart6').style('width'))
 
 // set the dimensions and margins of the graph
 var margin = {top: 100, right: 30, bottom: 30, left: 40},
@@ -897,14 +894,14 @@ var svg6 = d3.select("#chart6")
     .attr("transform",
           "translate(" + smallMargin.left + "," + smallMargin.top + ")");
 
-//Read the data
-d3.csv("./data/nick-nurse--reg-season-games.csv",function(data) {
+  //Read the data
+  d3.csv("./data/nick-nurse--reg-season-games.csv",function(data) {
   
   data.forEach(function(d) {
     d.date = parseDate(d.date)
   });
   
-  console.log(data);
+  // console.log(data);
 
   // Add X axis --> it is a date format
 //   var x = d3.scaleTime()
@@ -1284,13 +1281,18 @@ const getGameData = function(d){
     // focusText.style("opacity", 0)
   }
 
-})
+  })
+
+}
 
 
 
 
 
     function resize(){
+
+      buildCharts()
+
         var message = {'resize': 
                   {
                     'iframe':'graphic-iframe-1',
